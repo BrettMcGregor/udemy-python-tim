@@ -25,34 +25,38 @@
 # you could use other techniques (such as splitting the string up), that's not the
 # approach we're looking for here.
 
-#take user input - IP address
-#for now, use list
-IP_list = ["127.0.0.1", ".192.168.0.1","10.0.123456.255","172.16","255"]
-IP_list2 = [".123.45.678.91", "123.4567.8.9.", "123.156.289.10123456", "10.10t.10.10", "12.9.34.6.12.90", ""  ]
-#for now, use single item from list
+ipAddress = input("Please enter an IP address: ")
 
-# IP_address = IP_list[4]
-# print(IP_address)
+segment = 1
+segment_length = 0
+character = ""
 
-#determine number of segments and length of each segment
+for character in ipAddress:
+    if character == '.':
+        print("segment {} contains {} characters".format(segment, segment_length))
+        segment += 1
+        segment_length = 0
+    else:
+        segment_length += 1
 
-segment = 0
-length = 0
+# unless the final character in the string was a . then we haven't printed the last segment
+if character != '.':
+    print("segment {} contains {} characters".format(segment, segment_length))
 
-for i in range(0, len(IP_list2)):
-    print(IP_list2[i])
-    for char in IP_list2[i]:
-        length += 1
-        if char == ".":
-            length -= 1
-            if length > 0:
-                segment += 1
-                print(segment, length)
-                length = 0
-                continue
-    if length > 0:
-        print(segment+1, length)
-    segment = 0
-    length = 0
 
-#handle invalid entries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
