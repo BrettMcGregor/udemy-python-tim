@@ -11,18 +11,21 @@
 
 import random
 
-highest = 1000
+highest = 10
 answer = random.randint(1, highest)
 
-print("Please guess a number between 1 and {}: ".format(highest))
-guess = 0   # initialize to any number outside of the valid range
-while guess != answer:
+print("Please guess a number between 1 and {}: \nEnter 0 (zero) to exit".format(highest))
+
+while True:
     guess = int(input())
     if guess == 0:
+        print("Exiting the program.")
         break
-    if guess < answer:
+    elif guess == answer:
+        print("Well done you guessed it.")
+        break
+    elif guess < answer:
         print("Please guess higher")
-    elif guess > answer:  # guess must be greater than number
+    else:  # guess must be greater than number
         print("Please guess lower")
-    else:
-        print("Well done, you guessed it")
+print("See you next time")
