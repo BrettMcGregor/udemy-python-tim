@@ -21,11 +21,11 @@ while True:
     if guess == 0:
         print("Exiting the program.")
         break
-    elif guess == answer:
-        print("Well done you guessed it.")
-        break
     elif guess < answer:
         print("Please guess higher")
-    else:  # guess must be greater than number
+    elif guess > answer:
         print("Please guess lower")
+    else:
+        print("Well done you guessed it.")
+        break
 print("See you next time")
