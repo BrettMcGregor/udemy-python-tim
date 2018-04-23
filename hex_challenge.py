@@ -35,19 +35,15 @@
 number = int(input("Please enter an integer between 1 and 65535: "))
 remainder = number
 binary = []
-#print("check: {0} in binary is {0:0b}".format(number))
+print("check: {0} in binary is {0:0b}".format(number))
 
-for i in range(16, 0, -1):
+# this block is not handling input of zero
+for i in range(16, -1, -1):
     if 2**i > remainder:
         binary.append("0")
     else:
         binary.append("1")
         remainder -= 2**i
-if remainder == 1:
-    binary.append("1")
-else:
-    if remainder == 0:
-        binary.append("0")
 
 binary = "".join(binary)
 binary = binary.lstrip("0")
@@ -64,4 +60,4 @@ else:
     octal.append(remainder)
 
 print("{0} in octal is {1}".format(number, ("".join(str(x) for x in octal)).lstrip("0")))
-#print("{0} in octal is {0:0o}".format(number))
+# print("{0} in octal is {0:0o}".format(number))
