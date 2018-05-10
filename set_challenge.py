@@ -5,15 +5,15 @@
 # You can either enter the text from the keyboard or
 # initialise a string variable with the string.
 
-text = "anzac day with the family, brisbane, 2018"
-text_set = set(text)
+mystring = "ANZAC day with the family, Brisbane, 2018"
+text = set(mystring)
 vowels = {"a", "e", "i", "o", "u"}
 
-no_vowels = text_set.difference(vowels)
+no_vowels = text.difference(vowels)
 print(sorted(no_vowels))
 
 no_vowels2 = []
-for char in text:
+for char in mystring:
     if char in vowels:
         continue
     else:
