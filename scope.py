@@ -6,6 +6,10 @@ def fact(n):
             result *= f
     return result
 
+#
+# for i in range(130):
+#     print(i, fact(i))
+
 
 def factorial(n):
     #     n! can also be defined as n * (n - 1)!
@@ -41,6 +45,8 @@ def fibonacci(n):
 
 # Note that the recursive fib() function takes much longer to calculate than
 # the iterative approach in fibonacci()
-for i in range(36):
-    print(i, fibonacci(i), fib(i))
+# for i in range(36):
+#     print(i, fibonacci(i), fib(i))
+#
+
 
