@@ -13,7 +13,7 @@ print(output)
 
 # type your solution here:
 
-output2 = ([len(x) for x in text.split()])
+output2 = [len(x) for x in text.split()]
 print(output2)
 
 # It could be useful to store the original words in the list, as well.
